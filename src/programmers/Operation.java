@@ -17,4 +17,15 @@ public class Operation {
         }
         return answer;
     }
+
+    public int mod(int num1, int num2) {
+        int answer = 0;
+        boolean val = (0 < num1 && 100 >= num1) && (0 < num2 && 100 >= num2);
+
+        if (val) {
+            return num1 / num2;
+        }
+
+        return answer;
+    }
 }
