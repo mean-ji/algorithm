@@ -14,6 +14,8 @@ public class NotFinishAthletes {
                 answer = participant[i];
                 break;
             }
+            // 타 블로그 풀이를 보니 여기까지 왔다는 것은 마지막 주자가 완주하지 못했다는 의미이다 로 풀었음
+            // return participant[i];
         }
 
         return answer.equals("") ? participant[participant.length - 1] : answer;
