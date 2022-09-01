@@ -19,6 +19,7 @@ public class APlusBMinus7 {
         }
 
         br.close();
+        bw.flush(); // 남아있는 데이터 출력
         bw.close();
     }
 }
