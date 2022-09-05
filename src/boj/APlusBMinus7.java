@@ -9,9 +9,11 @@ public class APlusBMinus7 {
         int caseT = Integer.parseInt(br.readLine());
 
         for (int i = 1; i <= caseT; i++) {
-            String line = br.readLine();
-            int left = Integer.parseInt(line.split(" ")[0]);
-            int right = Integer.parseInt(line.split(" ")[1]);;
+            String [] line = br.readLine().split(" ");
+
+
+            int left = Integer.parseInt(line[0]);
+            int right = Integer.parseInt(line[1]);
             int total = left + right;
 
             bw.write("Case #" + i + ": " + total);
