@@ -8,7 +8,7 @@ public class EmployeesTarget {
     }
     public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {
         int employeesCnt = 0;
-        
+
         for (int hour : hours) {
             employeesCnt += hour >= target ? 1 : 0;
         }
