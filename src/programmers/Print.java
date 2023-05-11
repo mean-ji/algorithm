@@ -1,6 +1,7 @@
 package programmers;
 
 import java.util.Scanner;
+
 public class Print {
     public void printA(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,5 +16,9 @@ public class Print {
 
         System.out.println("a = " + a);
         System.out.println("b = " + b);
+    }
+
+    public int add(int num1, int num2) {
+        return num1 + num2;
     }
 }
