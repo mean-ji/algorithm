@@ -45,4 +45,19 @@ public class Print {
 
         return answer;
     }
+
+    public int div(int num1, int num2) {
+        int answer = 0;
+        boolean val = (0 < num1 && 100 >= num1) && (0 < num2 && 100 >= num2);
+
+        if (val) {
+            double num1Double = num1;
+            double num2Double = num2;
+            double result = (num1Double / num2Double) * 1000;
+
+            answer = (int) Math.floor(result);
+        }
+
+        return answer;
+    }
 }
