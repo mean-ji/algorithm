@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.Scanner;
 
-public class Print {
+public class Easy {
     public void printA(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
@@ -56,6 +56,18 @@ public class Print {
             double result = (num1Double / num2Double) * 1000;
 
             answer = (int) Math.floor(result);
+        }
+
+        return answer;
+    }
+
+    public int compare(int num1, int num2) {
+        int answer = 0;
+
+        boolean val = (0 <= num1 && 10000 >= num1) && (0 <= num2 && 10000 >= num2);
+
+        if (val) {
+            return num1 == num2 ? 1 : -1;
         }
 
         return answer;
