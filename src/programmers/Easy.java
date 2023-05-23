@@ -72,4 +72,15 @@ public class Easy {
 
         return answer;
     }
+
+    public int div2(int num1, int num2) {
+        int answer = -1;
+        boolean val = (0 < num1 && 100 >= num1) && (0 < num2 && 100 >= num2);
+
+        if (val) {
+            return num1 % num2;
+        }
+
+        return answer;
+    }
 }
