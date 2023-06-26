@@ -35,58 +35,6 @@ char* solution(int a, int b) {
     return answer;
 }
 
-long long add(int a, int b) {
-    long long answer = 0;
-    if(a>b){
-        for(int i = b; i <=a ; i++)
-            answer+=i;
-    }
-    else if(a<b){
-        for(int i = a; i <= b; i++)
-            answer+=i;
-    }
-    else
-        answer = a;
-    return answer;
-}
-
-char* subak(int n) {
-    char* a="수";
-    char* b="박";
-
-    // 리턴할 값은 메모리를 동적 할당해주세요.
-    char* answer = (char*)malloc(sizeof(b)*n);
-    strcpy(answer, a);
-    for (int i = 1; i < n ; i++){
-        if(i%2 == 0){
-            strcat(answer, a);
-        }else{
-            strcat(answer, b);
-        }
-
-
-    }
-    printf("%s",answer);
-
-    return answer;
-
-    free(answer);
-}
-
-int solution(int n) {
-    int c[3000] = {0,};
-
-    for(int i = n; i > 0; i --){
-        if(n%i == 0)
-            c[i] = i;
-    }
-    int answer = 0;
-    for(int i = 0; i < 3000 ; i++){
-        answer = answer + c[i];
-    }
-    return answer;
-}
-
 int main(){
     int a , b;
     printf("2016년 a월 b일을 구해봅시다!!");
@@ -98,13 +46,4 @@ int main(){
     free(ans);
     printf(" %s ", ans);
 
-    int n;
-    printf("수박을 n번 출력!!");
-    scanf("%d", &n);
-    solution(n);
-
-    int n;
-    printf("약수의 합을 구합시당다라당당");
-    scanf("%d", &n);
-    solution(n);
 }
