@@ -93,4 +93,12 @@ public class Easy {
             System.out.print(str);
         }
     }
+
+    public static void printEvenOdd(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean isOdd = n % 2 == 1;
+
+        System.out.println(n + " is " + (isOdd ? "odd" : "even"));
+    }
 }
