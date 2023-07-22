@@ -101,4 +101,20 @@ public class Easy {
 
         System.out.println(n + " is " + (isOdd ? "odd" : "even"));
     }
+
+    public static void main(String[] args) {
+        Easy e = new Easy();
+        e.substring("hahahahahahahahha", "youretoslow", 4);
+    }
+
+    public String substring(String my_string, String overwrite_string, int s) {
+        String answer = "";
+        if (s + overwrite_string.length() < my_string.length()) {
+            answer = my_string.substring(0, s) + overwrite_string + my_string.substring(overwrite_string.length() + s);
+        } else {
+            answer = my_string.substring(0, s) + overwrite_string;
+        }
+        System.out.println(answer);
+        return answer;
+    }
 }
