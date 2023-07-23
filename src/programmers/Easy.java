@@ -117,4 +117,12 @@ public class Easy {
         System.out.println(answer);
         return answer;
     }
+
+    public void printAPlusB(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(a + " + " + b + " = " + (a + b));
+    }
 }
