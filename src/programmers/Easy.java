@@ -125,4 +125,8 @@ public class Easy {
 
         System.out.println(a + " + " + b + " = " + (a + b));
     }
+
+    public void printSpecialString() {
+        System.out.println("!@#$%^&*(\\\'\"<>?:;");
+    }
 }
