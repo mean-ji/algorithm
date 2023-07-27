@@ -137,4 +137,12 @@ public class Easy {
         }
         return answer.toString();
     }
+
+    public static void println(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        for (int i = 0; i < a.length(); i++) {
+            System.out.println(a.charAt(i));
+        }
+    }
 }
