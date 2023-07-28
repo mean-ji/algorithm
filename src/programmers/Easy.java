@@ -145,4 +145,11 @@ public class Easy {
             System.out.println(a.charAt(i));
         }
     }
+
+    public static void attach(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
+        System.out.println(a + b);
+    }
 }
