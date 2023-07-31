@@ -152,4 +152,10 @@ public class Easy {
         String b = sc.next();
         System.out.println(a + b);
     }
+
+    public String join(String[] arr) {
+        String answer = "";
+        answer = String.join("", arr);
+        return answer;
+    }
 }
