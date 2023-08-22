@@ -1,5 +1,7 @@
 package programmers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Easy {
@@ -157,5 +159,15 @@ public class Easy {
         String answer = "";
         answer = String.join("", arr);
         return answer;
+    }
+
+    public static void changeUpperLower(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        for (int i = 0; i < a.length(); i++) {
+            System.out.print(
+                    Character.isUpperCase(a.charAt(i)) ? String.valueOf(a.charAt(i)).toLowerCase() : String.valueOf(a.charAt(i)).toUpperCase()
+            );
+        }
     }
 }
