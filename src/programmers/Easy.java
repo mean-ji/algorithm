@@ -180,4 +180,12 @@ public class Easy {
 
         return answer;
     }
+
+    public int findMax(int a, int b) {
+        int answer = 0;
+        String str1 = a + String.valueOf(b);
+        String str2 = b + String.valueOf(a);
+
+        return Math.max(Integer.parseInt(str1), Integer.parseInt(str2));
+    }
 }
