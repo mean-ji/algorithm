@@ -182,10 +182,16 @@ public class Easy {
     }
 
     public int findMax(int a, int b) {
-        int answer = 0;
         String str1 = a + String.valueOf(b);
         String str2 = b + String.valueOf(a);
 
         return Math.max(Integer.parseInt(str1), Integer.parseInt(str2));
+    }
+
+    public int findMax2(int a, int b) {
+        String str1 = a + String.valueOf(b);
+        int str2 = 2 * a * b;
+
+        return Math.max(Integer.parseInt(str1), str2);
     }
 }
