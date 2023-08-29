@@ -194,4 +194,9 @@ public class Easy {
 
         return Math.max(Integer.parseInt(str1), str2);
     }
+
+    public int multN(int num, int n) {
+        Boolean multN = num % n == 0;
+        return multN.compareTo(false);
+    }
 }
