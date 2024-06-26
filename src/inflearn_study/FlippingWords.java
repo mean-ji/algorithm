@@ -84,7 +84,7 @@ public class FlippingWords {
 //            char[] s = x.toCharArray();
 //            int lt = 0;
 //            int rt = x.length() - 1;
-//            while (lt > rt) {
+//            while (lt < rt) {
 //                char tmp = s[lt];
 //                s[lt] = s[rt];
 //                s[rt] = tmp;
