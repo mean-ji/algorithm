@@ -4,44 +4,29 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Stable {
-    public int[] count(int[] arr, int capacity) {
-        int[] result = new int[2];
+    public int count(int[] arr, int dist) {
+        int ep = arr[0];
         int cnt = 1;
-        int diff = arr[arr.length - 1];
-        int j = 0;
-        for (int i = 0; i < arr.length; i = j - 1) {
-            for (j = i + 1; j < arr.length; j++) {
-                System.out.println(j + " " + i);
-                if (arr[j] - arr[i] > capacity) {
-                    cnt ++;
-                    break;
-                } else diff = Math.max(arr[j] - arr[i], diff);
-            }
+        for (int i = 0; i < arr.length; i++) {
+           if (arr[i] - ep >= dist) {
+               cnt++;
+               ep = arr[i];
+           }
         }
-        result[0] = cnt;
-        result[1] = diff;
-        System.out.println(Arrays.toString(result));
-        return result;
+        return cnt;
     }
     public int solution(int n, int c, int[] arr) {
-        Arrays.sort(arr);
         int answer = 0;
-        int lt = 0;
-        int rt = Arrays.stream(arr).max().getAsInt() - Arrays.stream(arr).min().getAsInt();
-        int[] result = new int[2];
+        Arrays.sort(arr);
+        int lt = 1;
+        int rt = arr[n - 1];
         while(lt <= rt) {
-        System.out.println(lt + " " + rt);
             int mid = (lt + rt) / 2;
-            result = count(arr, mid);
-
-            if (result[0] < c) {
-                answer = Math.max(result[1], answer);
-
-                rt = mid - 1;
-            } else {
-
-                System.out.println(answer);
+            if (count(arr, mid) >= c) {
+                answer = mid;
                 lt = mid + 1;
+            } else {
+                rt = mid - 1;
             }
         }
         return answer;
