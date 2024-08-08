@@ -15,15 +15,32 @@ class Node2 {
 public class BinaryTree2 {
     Node2 root;
     Queue<Node2> q = new LinkedList<>();
+    // me
+//    public void bfs(Node2 root) {
+//        q.offer(root);
+//        while(!q.isEmpty()) {
+//            if (root.rt != null && root.lt != null) {
+//                q.offer(root.lt);
+//                q.offer(root.rt);
+//            }
+//            System.out.print(q.poll().data + " ");
+//            root = q.peek();
+//        }
+//    }
     public void bfs(Node2 root) {
         q.offer(root);
+        int L = 0;
         while(!q.isEmpty()) {
-            if (root.rt != null && root.lt != null) {
-                q.offer(root.lt);
-                q.offer(root.rt);
+            int len = q.size();
+            System.out.print(L + " : ");
+            for (int i = 0; i < len; i++) {
+                Node2 cur = q.poll();
+                System.out.print(cur.data + " ");
+                if (cur.lt != null) q.offer(cur.lt);
+                if (cur.rt != null) q.offer(cur.rt);
             }
-            System.out.print(q.poll().data + " ");
-            root = q.peek();
+            L++;
+            System.out.println();
         }
     }
     public static void main(String[] args) {
