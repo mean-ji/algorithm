@@ -12,27 +12,45 @@ class Node4 {
     }
 }
 
-// me
 public class Tree_BFS {
     Node4 root;
+    // me
+//    public int bfs(Node4 root) {
+//        Queue<Node4> q = new LinkedList<>();
+//        q.offer(root);
+//        int L = 0;
+//        int cnt = 0;
+//        while(!q.isEmpty()) {
+//            Node4 tmp = q.poll();
+//            cnt ++;
+//            if (cnt > Math.pow(2, L)) {
+//                cnt = 0;
+//                L++;
+//            }
+//            if (tmp.lt != null && tmp.rt != null) {
+//                q.offer(tmp.lt);
+//                q.offer(tmp.rt);
+//            } else {
+//                return L;
+//            }
+//        }
+//        return L;
+//    }
+
+    // lecture
     public int bfs(Node4 root) {
         Queue<Node4> q = new LinkedList<>();
         q.offer(root);
         int L = 0;
-        int cnt = 0;
         while(!q.isEmpty()) {
-            Node4 tmp = q.poll();
-            cnt ++;
-            if (cnt > Math.pow(2, L)) {
-                cnt = 0;
-                L++;
+            int len = q.size();
+            for (int i = 0; i < len; i++) {
+                Node4 cur = q.poll();
+                if (cur.lt == null && cur.rt == null) return L;
+                if (cur.lt != null) q.offer(cur.lt);
+                if (cur.rt != null) q.offer(cur.rt);
             }
-            if (tmp.lt != null && tmp.rt != null) {
-                q.offer(tmp.lt);
-                q.offer(tmp.rt);
-            } else {
-                return L;
-            }
+            L++;
         }
         return L;
     }
